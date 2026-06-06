@@ -1,0 +1,29 @@
+# Upstream clones kept locally for reference, not committed to our tree
+_upstream-*/
+
+# macOS
+.DS_Store
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+build/
+*.xcscmblueprint
+*.xccheckout
+
+# Swift/SPM
+.build/
+.swiftpm/
+
+# Node (tunnel tooling, if any)
+node_modules/
+*.log
+
+# Secrets / local certs
+*.p12
+*.pem
+*.key
+!docs/**/*.pem
+.env
+.env.local
