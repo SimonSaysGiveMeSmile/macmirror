@@ -25,8 +25,8 @@ Philosophy: **prove it works on real hardware first, then fork and customize.** 
 - [ ] M1.1 Fork Lumen → `host/`, moonlight-ios → `client/`; get both building from our tree.
 - [ ] M1.2 Tunnel: **mDNS/Bonjour** LAN discovery (`_macmirror._udp`).
 - [ ] M1.3 Tunnel: **global IPv6** direct connect (ICE host candidates / direct dial); reachability check.
-- [ ] M1.4 Pairing: host generates `macmirror://pair?...` **QR + link** with cert fingerprint + session token.
-- [ ] M1.5 Client: **camera QR scan** → parse → **pin fingerprint** → connect (no manual IP).
+- [x] M1.4 Pairing (host side): generates `macmirror://pair?...` **QR + link** with cert fingerprint + session token → `tunnel/pairing-tool/`. *(Auto-detects global IPv6 + LAN hint, pins cacert.pem SHA-256, mints 128-bit token.)*
+- [ ] M1.5 Client: **camera QR scan** → parse → **pin fingerprint** → present token → connect (no manual IP). *(moonlight-ios fork; needs Xcode + device.)*
 - [ ] M1.6 Input fixes: Magic Keyboard trackpad raw deltas + pointer lock; keyboard combos.
 - [ ] M1.7 QR-free reconnect (persisted device keypairs).
 

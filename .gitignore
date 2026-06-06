@@ -20,6 +20,9 @@ build/
 node_modules/
 *.log
 
+# Generated pairing QR (embeds a session token)
+tunnel/pairing-tool/pair-qr.png
+
 # Secrets / local certs
 *.p12
 *.pem

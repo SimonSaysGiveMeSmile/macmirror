@@ -1,0 +1,10 @@
+{
+  "name": "macmirror-pairing-tool",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MacMirror host-side pairing QR generator (Milestone 1). Builds the macmirror://pair?... payload, pins the host cert fingerprint, mints a session token, and renders a scannable QR.",
+  "bin": { "macmirror-pair": "./generate-qr.mjs" },
+  "scripts": { "pair": "node generate-qr.mjs" },
+  "dependencies": { "qrcode": "^1.5.4" }
+}
